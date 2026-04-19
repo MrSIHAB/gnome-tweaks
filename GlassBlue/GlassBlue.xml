@@ -4,7 +4,7 @@
   <wallpaper deleted="false">
     <name>Glass Blue</name>
     <filename>@BACKGROUNDDIR@/GlassBlue/GlassBlueLight.png</filename>
-    <filename-dark>@BACKGROUNDDIR@/GlassBlue/GlassBlueDark.jpg</filename-dark>
+    <filename-dark>@BACKGROUNDDIR@/GlassBlue/GlassBlueDark.png</filename-dark>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#51a2da</pcolor>

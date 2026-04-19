@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LIGHT_IMAGE="GlassBlueLight.png"
-DARK_IMAGE="GlassBlueDark.jpg"
+DARK_IMAGE="GlassBlueDark.png"
 XML_FILE="GlassBlue.xml"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
