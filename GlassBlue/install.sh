@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Light Image is 'GlassBlueLight.png'
-# Dark Image is 'GlassBlueDark.jpg'
-# XML File is 'GlassBlue.xml'
-# All the files are situated in './{Files and Image name}'
-
 LIGHT_IMAGE="GlassBlueLight.png"
 DARK_IMAGE="GlassBlueDark.jpg"
 XML_FILE="GlassBlue.xml"
@@ -23,6 +18,9 @@ else
     IMG_DEST="$HOME/.local/share/backgrounds/GlassBlue"
 fi
 
+# The parent backgrounds dir (without /GlassBlue) is what the XML placeholder expects
+BACKGROUND_DIR="${IMG_DEST%/GlassBlue}"
+
 # Check for -r / --remove flag
 if [[ "$1" == "-r" || "$1" == "--remove" ]]; then
     rm -f "$IMG_DEST/$LIGHT_IMAGE"
@@ -38,8 +36,8 @@ mkdir -p "$XML_DEST"
 # Check for existing files (conflicts)
 CONFLICT=false
 [[ -f "$IMG_DEST/$LIGHT_IMAGE" ]] && CONFLICT=true
-[[ -f "$IMG_DEST/$DARK_IMAGE" ]] && CONFLICT=true
-[[ -f "$XML_DEST/$XML_FILE" ]]   && CONFLICT=true
+[[ -f "$IMG_DEST/$DARK_IMAGE"  ]] && CONFLICT=true
+[[ -f "$XML_DEST/$XML_FILE"    ]] && CONFLICT=true
 
 if [[ "$CONFLICT" == true ]]; then
     echo "One or more files already exist at the destination:"
@@ -59,6 +57,9 @@ mkdir -p "$IMG_DEST"
 cp "$LIGHT_SRC" "$IMG_DEST/$LIGHT_IMAGE"
 cp "$DARK_SRC"  "$IMG_DEST/$DARK_IMAGE"
 cp "$XML_SRC"   "$XML_DEST/$XML_FILE"
+
+# Replace @BACKGROUNDDIR@ placeholder in the copied XML with the actual path
+sed -i "s|@BACKGROUNDDIR@|${BACKGROUND_DIR}|g" "$XML_DEST/$XML_FILE"
 
 echo "GlassBlue wallpaper installed successfully."
 echo "  Images -> $IMG_DEST"
