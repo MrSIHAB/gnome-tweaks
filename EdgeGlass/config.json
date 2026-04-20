@@ -1,0 +1,13 @@
+{
+  "images": [
+    {
+      "fileName": "EdgeGlassLight.png",
+      "appearance": "light"
+    },
+    {
+      "fileName": "EdgeGlassDark.png",
+      "isPrimary": true,
+      "appearance": "dark"
+    }
+  ]
+}
