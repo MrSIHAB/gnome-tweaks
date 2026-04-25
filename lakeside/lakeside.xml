@@ -1,0 +1,70 @@
+<background>
+  <!-- Converted from KDE Dynamic Wallpaper -->
+
+  <starttime>
+    <hour>6</hour>
+    <minute>0</minute>
+    <second>0</second>
+  </starttime>
+
+  <!-- Dawn -->
+  <static>
+    <duration>5400</duration>
+    <file>@BACKGROUNDDIR@/lakeside/4.jpg</file>
+  </static>
+
+  <transition>
+    <duration>600</duration>
+    <from>@BACKGROUNDDIR@/lakeside/4.jpg</from>
+    <to>@BACKGROUNDDIR@/lakeside/1.jpg</to>
+  </transition>
+
+  <!-- Early Morning -->
+  <static>
+    <duration>5400</duration>
+    <file>@BACKGROUNDDIR@/lakeside/1.jpg</file>
+  </static>
+
+  <transition>
+    <duration>600</duration>
+    <from>@BACKGROUNDDIR@/lakeside/1.jpg</from>
+    <to>@BACKGROUNDDIR@/lakeside/2.jpg</to>
+  </transition>
+
+  <!-- Day -->
+  <static>
+    <duration>32400</duration>
+    <file>@BACKGROUNDDIR@/lakeside/2.jpg</file>
+  </static>
+
+  <transition>
+    <duration>600</duration>
+    <from>@BACKGROUNDDIR@/lakeside/2.jpg</from>
+    <to>@BACKGROUNDDIR@/lakeside/3.jpg</to>
+  </transition>
+
+  <!-- Evening -->
+  <static>
+    <duration>7200</duration>
+    <file>@BACKGROUNDDIR@/lakeside/3.jpg</file>
+  </static>
+
+  <transition>
+    <duration>600</duration>
+    <from>@BACKGROUNDDIR@/lakeside/3.jpg</from>
+    <to>@BACKGROUNDDIR@/lakeside/4.jpg</to>
+  </transition>
+
+  <!-- Night -->
+  <static>
+    <duration>28800</duration>
+    <file>@BACKGROUNDDIR@/lakeside/4.jpg</file>
+  </static>
+
+  <transition>
+    <duration>600</duration>
+    <from>@BACKGROUNDDIR@/lakeside/4.jpg</from>
+    <to>@BACKGROUNDDIR@/lakeside/4.jpg</to>
+  </transition>
+
+</background>
